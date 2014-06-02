@@ -74,6 +74,7 @@ What happens when you....?
 * What does Capybara do?
 * What files does the rails controller generator create?  List them all.
 * What does this line do? `(helloworld_rspec)]$ git push --set-upstream origin helloworld_rspec`
+* What is the spec_helper?
 
 
 
