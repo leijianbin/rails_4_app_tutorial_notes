@@ -68,6 +68,14 @@ What happens when you....?
 * View [http://localhost:3000/helloworld](http://localhost:3000/helloworld) while your server is running
 
 
+#Update Your README.md
+
+* Explain what you accomplished in this lesson
+* What does Capybara do?
+* What files does the rails controller generator create?  List them all.
+* What does this line do? `(helloworld_rspec)]$ git push --set-upstream origin helloworld_rspec`
+
+
 
 
 
