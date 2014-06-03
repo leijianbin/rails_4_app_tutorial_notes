@@ -55,3 +55,6 @@ What happens when you....?
 
 * Explain what you did
 * Explain what is the difference between .find_or_create_by and find_or_initialize_by
+* What does the forgery gem do?
+* What other gems are out there to help create seed data?
+* How do you select a random element from an array?
