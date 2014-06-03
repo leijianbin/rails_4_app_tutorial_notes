@@ -44,6 +44,7 @@ What happens when you....?
 
 #Update your README.md
 
+* Explain what you did this lesson
 * Why do we use validations?
 * Name at least 3 types of default Rails(non-custom) validations
 * What are some things that you might want to write a custom validation for?
