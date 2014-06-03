@@ -110,6 +110,6 @@ What happens when you....?
 
 * List every file that the scaffold created for you 
 * Explain the code that was created in each of those files
-* ** DO NOT MOVE ON UNTIL YOU UNDERSTAND EVERY SINGLE THING THE SCAFFOLD DID FOR YOU.  I'M NOT JOKING!  SPEND MULTIPLE HOURS IF YOU NEED TO **.  
+* **DO NOT MOVE ON UNTIL YOU UNDERSTAND EVERY SINGLE THING THE SCAFFOLD DID FOR YOU.  I'M NOT JOKING!  SPEND MULTIPLE HOURS IF YOU NEED TO**.  
 * What code can we remove from the generated files?
 * Explain the arguments for and against using scaffolds.
