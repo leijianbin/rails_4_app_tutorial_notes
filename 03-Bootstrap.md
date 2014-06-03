@@ -77,6 +77,13 @@ What happens when you....?
 * View [http://localhost:3000/helloworld](http://localhost:3000/helloworld) while your server is running
 * Resize your browse window to make it the same size as a mobile phone screen
 
+#Update Your README
+
+* What is sass in `bootstrap-sass`?
+* Where do all the bootstrap files go when you install the gem?
+* What does this line ` *= require_tree .` in your application.css do?  Make sure you understand this!
+* What is the Rails Asset pipeline? Read this [Rails Guide](http://guides.rubyonrails.org/asset_pipeline.html) and then write a few sentences explaning the asset pipeline.
+
 
 
 
