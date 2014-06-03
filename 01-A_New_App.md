@@ -80,6 +80,22 @@ What happens when you....?
 * In Chrome Dev Tools open up the rails panel
 * Run ```ls test``` - The test directory is for unit tests, your app should only have a ```spec``` directory.
 
+#Update Your README.md
+
+* Explain what you accomplished in this lesson
+* Explain what the following gems do:
+	* better_errors
+	* quiet_assets
+	* meta_request
+	* awesome_print
+	* pry_rails
+	* binding_of_caller
+	* pry-byebug
+* What does `bundle install` actaully do?
+* Why do we use Postgres instead of sqlite3?
+
+
+
 
 #Update Your README.md
 

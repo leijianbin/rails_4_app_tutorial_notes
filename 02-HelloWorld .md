@@ -78,5 +78,11 @@ What happens when you....?
 
 
 
+#Update Your README.md
+
+* Explain what you accomplished in this lesson
+* What is Capybara?
+* What is the spec_helper?
+
 
 
