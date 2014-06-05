@@ -1,40 +1,51 @@
-Level 08 - Associations!
+Level 09 - Authorization!
 -----------
 
 #Overview
-* Make ```Thing``` belong to ```User```
-* ```User``` has_many ```Thing```s
-* Update Seed File to reflect new model associations
+* Fix the controller to reflect the changes we made to our models
+* Make sure users can only delete and edit their own Things
+* Use partials to prevent repetition of code
 
 #Level Resources
 
-* [Active Record Associations Rails Guide](http://guides.rubyonrails.org/association_basics.html)
-* [Migrations Rails Guide](http://guides.rubyonrails.org/migrations.html)
+* [Layouts and Rendering Rails Guide](http://guides.rubyonrails.org/layouts_and_rendering.html)
+* [Devise Documentation](http://devise.plataformatec.com.br/)
 
 
 
 #Do it for Yourself
 
-* Branch name for this feature: 'ownership'
+* Branch name for this feature: 'authorization'
 
-* Run ```git checkout -b ownership``` to create and switch to the new branch
+* Run ```git checkout -b authorization``` to create and switch to the new branch
 
-Create a new migration to add a `User` reference to our `Thing` model.  What's the difference between `user:references` and `user_id:integer`? You can use either one in this case, but they are not the same! Make sure you understand this before moving on.
+Try to create a new Thing in your browser.  Does it work?  If not, why?
 
-Run `rake db:migrate`
+We need to fix our controller methods to reflect the changes we made to our models yesterday.
 
-Add the proper model associations between User and Thing.  has_many? has_one?  belongs_to?
+The first thing we should do is fix our `create` method.  When a new Thing is created, we need to associate it with the user that created it.
 
-Now that we have our models assocated, let's add a validation to the Thing model.  Write code to make sure a Thing is created with a user_id.
+Next, let's fix our `Edit` method.  Make sure that a user can only edit a thing that he/she created. If the user doesn't have permission to edit a Thing, redirect somewhere and display a "You don't have permission to do that" error message.
 
-Reset the database and then re-seed the database.
+Similarly, fix `Destroy` to make a user can only delete his/her Things.  If the user doesn't have permission to delete a Thing, redirect somewhere and display a "You don't have permission to do that" error message.
 
-Oh no! Our seed file doesn't work anymore.  What's wrong? Figure out a way to fix it.  Hint: you need to add a User!
+You may have noticed that the code you added to `Edit` and `Destroy` is very similar. Move the authorization code to its own method.  Call it before any necessary actions using a before_action.
 
-Open your rails Console and make sure that you have at least one User in your database.  Check to make sure that User has multiple Things associated with it.
+Next, let's make sure to hide the `edit` and `delete` links on the index page for posts that the logged in user does not own. 
+
+Similarly, fix the `show` view so that it doesn't display an `edit` link to users that do not own the Thing.
+
+Next, we're going to make a brand new page that willd display all of the Things that belong to the logged in user.  Let's call it `my_things`.
+
+Create a route for `my_things`.  
+
+Then, add the `my_things` method to the Things controller.  Retrieve all the Things that belong to the logged in user.
+
+Lastly, create the `my_things` view.  In the view, display each Thing with its respective `edit`, `show`, and `delete` links.
+
+You may have noticed that your `my_things` view and `index` view are extremely similar.  Move the repeated code to a partial to prevent repetition.
 
 Pat yourself on the back.
-
 
 __After__ you've made your changes, commit and push your branch up to your repo
 
@@ -46,24 +57,18 @@ __After__ you've made your changes, commit and push your branch up to your repo
 
 What happens when you....?
 
-* Try to make a new Thing in your console?
 * Try to make a new Thing in your browser?
 * Run ```rspec```
-* Delete a specific User.  What happens to its associated Things?
+* Try to access an edit page for a Thing that doesn't belong to you
+* Try to access a delete page for a Thing that doesn't belong to you
 
 #Update Your README.md
 
 * Explain what you did
-* What is the relationship between has_many and belongs_to?
-* What is a foreign key?
-* What actually happens when we add associations between models?
-  * What does it do behind the scenes?
-  * How does it allow us to shorten our controller methods?  Think about what your code would look like if you couldn't use model associations.
-* There are 6 model associations.  What are they? Explain each one and give an example of when you might use each one.
-* How do Rails migrations work?
-* Do you need to name a migration anything specific?  Are ther
-* What's the difference between `user:references` and `user_id:integer`
-* How do you undo a migration?
+* What happens if you put the `flash[:errors]` after the redirect?  Before?
+* What is the different between the flash hash and `notice`?
+* Why do we use partials?  
+* What is a before_action?  Why do we use them?
 
 
 
