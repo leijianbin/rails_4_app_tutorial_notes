@@ -10,6 +10,7 @@ Level 09 - Authorization!
 
 * [Layouts and Rendering Rails Guide](http://guides.rubyonrails.org/layouts_and_rendering.html)
 * [Devise Documentation](http://devise.plataformatec.com.br/)
+* [Rails Flash Hash Blog Post](http://travisonrails.com/2008/08/17/working-with-the-flash-hash)
 
 
 
